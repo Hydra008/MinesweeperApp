@@ -8,10 +8,18 @@ import java.util.Random;
 
 public class GameGenerator {
     private int grid[][];
-    private int bombs;
+    public int bombs;
     private int gridSize;
 
-    public GameGenerator(int gridSize,int bombs){
+    public int getBombs() {
+        return bombs;
+    }
+
+    public void setBombs(int bombs) {
+        this.bombs = bombs;
+    }
+
+    public GameGenerator(int gridSize, int bombs){
         this.bombs=bombs;
         this.gridSize=gridSize;
     }
@@ -52,7 +60,7 @@ public class GameGenerator {
         }
         return grid;
     }
-
+    //calculating neighbours
     private int calculateHints(int[][] grid, int i, int j) {
         if (grid[i][j]==-1)
         {

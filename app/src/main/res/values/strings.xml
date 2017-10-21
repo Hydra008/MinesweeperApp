@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Mine</string>
+    <integer name="bomb">9</integer>
 </resources>

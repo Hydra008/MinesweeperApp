@@ -13,19 +13,56 @@
         tools:context="com.codegodfather.mine.MainActivity">
 
 
+
+
         <GridView
             android:id="@+id/grid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             android:horizontalSpacing="10dp"
             android:verticalSpacing="10dp"
             android:fadingEdge="horizontal|vertical"
-            android:numColumns="10"
+            android:numColumns="9"
             android:stretchMode="columnWidth" />
 
+        <TextView
+            android:id="@+id/Timer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/grid"
+            android:text="TextView"
+            android:textSize="24sp" />
 
+    <Button
+        android:id="@+id/Beginner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Timer"
+        android:text="Beginner" />
 
-    </RelativeLayout>
+    <Button
+        android:id="@+id/Intermediate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Beginner"
+        android:text="Intermediate" />
+
+    <Button
+        android:id="@+id/Expert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/Beginner"
+        android:layout_below="@id/Timer"
+        android:text="Expert" />
+
+    <Button
+        android:id="@+id/Playagain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/Intermediate"
+        android:layout_below="@id/Expert"
+        android:text="Play again" />
+
+</RelativeLayout>
 

@@ -5,6 +5,7 @@ package com.codegodfather.mine;
  */
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,11 +19,11 @@ import android.widget.TextView;
 public class CustomGridAdopter extends BaseAdapter {
 
     private Context context;
-    private int[] item;
+    private String[] item;
     LayoutInflater inflater;
 
 
-    public CustomGridAdopter(Context context,int[] item) {
+    public CustomGridAdopter(Context context,String[] item) {
         this.context=context;
         this.item=item;
         inflater = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -53,8 +54,23 @@ public class CustomGridAdopter extends BaseAdapter {
 
 
 
-        if(i<100) {
-            tv.setText(Integer.toString(item[i]));
+        if(i<81) {
+            if(item[i].equalsIgnoreCase("*"))
+            {
+                tv.setTextColor(Color.RED);
+                tv.setText(item[i]);
+            }
+            else  if(item[i].equalsIgnoreCase("F"))
+            {
+                tv.setTextColor(Color.BLUE);
+                tv.setText(item[i]);
+            }
+            else
+            {
+                tv.setTextColor(Color.DKGRAY);
+                tv.setText(item[i]);
+            }
+
         }
         return view;
     }
